@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md">
+    <button class="btn btn-success nwBtn"
+            (click)="onNewRecipe()">New Book</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+
+    <app-book-item
+            *ngFor="let bookEl of books; let i = index"
+            [book] = "bookEl"
+            [index]="i"
+          ></app-book-item>
+  </div>
+</div>

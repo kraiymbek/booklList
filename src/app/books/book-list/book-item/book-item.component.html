@@ -1,0 +1,21 @@
+<div
+        style="cursor: pointer"
+   class="list-group-item clearfix flex-column align-items-start"
+
+   >
+
+  <div class="d-flex w-100 justify-content-between">
+    <h5 class="mb-1">{{book.name}}</h5>
+    <small>{{book.addedTime.toLocaleString()}}</small>
+
+  </div>
+  <p class="mb-1 float-left">{{book.description}}</p>
+  <img [src]="book.imagePath"
+       alt="{{book.name}}"
+       class="img-fluid float-right">
+  <small>{{book.author}}</small>
+  <div>
+   <button class="btn btn-primary" (click)="onEditBook()">Details</button>
+    <button  role="button" class="btn btn-danger" (click)="onDeleteBook()" >Delete Book</button>
+  </div>
+</div>
